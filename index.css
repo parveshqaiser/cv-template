@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-box {
+    background-color: rgba(15, 7, 61, 0.8);
+    padding: 1rem 2rem;
+    border-bottom-right-radius: 4rem;
+}
+
+.img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    margin-left: 4rem;
+}
+
+.header-name{
+    margin: 0 5rem;
+}
+
+.header-name span:not(.designation){
+    display: block;
+    font-weight:bolder;
+    font-size: 2rem;
+    color: rgba(15, 7, 61, 0.8);
+}
+
+.header-name .designation {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: rgba(15, 7, 61, 0.8);
+}
+
+
+/* section */
+.section-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:0.8rem 4rem;
+    background-color: rgba(15, 7, 61, 0.8);
+    color: white;
+    padding:0.8rem 1rem;
+    border-radius: 2rem;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* content */
+
+.content-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-content-box {
+    /* max-width: 40vw; */
+    /* width: 23vw; */
+    max-width: 23vw;
+    width: 100%;
+    background-color: rgba(15, 7, 61, 0.8);
+    color: white;
+    padding: 1rem 0.8rem;
+    border-radius: 0 4rem 0 0;
+}
+
+.right-content-box {
+    /* max-width: 63vw; */
+    flex: 1; /* will take the remaining sizes */
+    margin: 0 5rem;
+    margin-top: 2rem;
+}
+
+.education-box , .certification-box , .skill-box , .lang-box{
+    margin-left: 3.5rem;
+}
+
+.education-box h2 , .certification-box h2 , .skill-box h2 , .lang-box h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: monospace;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-box h4 {
+    margin: 0.5rem 0;
+}
+
+.education-box .ed-text{
+    font-size: smaller;
+    font-family: system-ui;
+}
+
+.certification-box ul {
+    font-size: smaller;
+    font-family: system-ui;
+    margin: 0.5rem 0 0.5rem 1.2rem;
+}
+
+.skill-box p  , .lang-box p{
+    margin: 0.5rem 0;
+    font-size: smaller;
+    font-family: system-ui;
+}
+
+
+/* right content or right container box */
+
+.right-content-box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: monospace;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    color:  rgba(15, 7, 61, 0.8);;
+}
+
+.right-content-box p {
+    text-align: justify;
+    font-size: smaller;
+    font-family: system-ui;
+}
+
+.exp-timeline{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.4rem 0;
+}
+
+.exp-timeline .exp-designation {
+    color: black;
+    font-weight: bold;
+}
+
+.exp-designation + div {
+    color: rgb(112, 104, 104);
+    font-size: smaller;
+}
+
+.exp-company {
+    font-weight: bold;
+    color: rgb(126, 112, 112);
+}
+
+.ref-box div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+
+
+@media (max-width: 1024px) {
+    .content-box {
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    .left-content-box {
+        max-width: 100%; 
+        border-radius: 0;
+    }
+
+    .right-content-box {
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-box {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .img {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .header-name {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .section-box {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 2rem;
+    }
+
+    .content-box {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-box {
+        flex-direction: column;
+    }
+
+    .img-box {
+       width: 100%;
+       border-radius:0;
+    }
+
+    .img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 100%;
+        margin: 0rem;
+    }
+
+    .header-name span:not(.designation) {
+        font-size: 1.5rem;
+    }
+
+    .header-name .designation {
+        font-size: 1rem;
+    }
+
+    .section-box {
+        margin: 1rem 0rem;
+        padding: 1rem;
+        border-radius: 0;
+    }
+
+    .content-box {
+        margin: 0;
+    }
+
+    .right-content-box {
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .education-box , .certification-box , .skill-box , .lang-box{
+        margin: 0.5rem;
+    }
+}
